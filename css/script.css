@@ -1,0 +1,135 @@
+body {
+    font-family: 'Arial', sans-serif; /* 设置全局字体 */
+    background-color: #eaeaea; /* 设置背景色 */
+    color: #333; /* 设置文本颜色 */
+    line-height: 1.6; /* 增加行高 */
+    margin: 0; /* 移除默认外边距 */
+    padding: 0; /* 移除默认内边距 */
+}
+
+/* 使用渐变背景和圆角容器 */
+.container {
+    width: 60%; /* 设置宽度为60% */
+    margin: 10% auto 0; /* 上边距10%，自动左右居中 */
+    background: linear-gradient(135deg, #f0f0f0, #ffffff); /* 渐变背景 */
+    padding: 2% 5%; /* 内边距 */
+    border-radius: 15px; /* 边角圆滑 */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* 增强阴影效果 */
+}
+
+/* 列表样式 */
+ul {
+    padding-left: 20px; /* 左侧内边距 */
+}
+
+ul li {
+    line-height: 2.3; /* 行高 */
+    padding: 5px 0; /* 每个列表项的上下内边距 */
+    transition: background-color 0.3s; /* 渐变背景过渡效果 */
+}
+
+/* 列表项鼠标悬停时的效果 */
+ul li:hover {
+    background-color: rgba(240, 240, 240, 0.5); /* 悬停时颜色变化 */
+}
+
+a {
+    color: #20a53a; /* 设置链接颜色 */
+    text-decoration: none; /* 移除下划线 */
+    transition: color 0.3s; /*链接颜色过渡 */
+}
+
+a:hover {
+    color: #16a34a; /* 悬停时链接颜色变化 */
+}
+
+/* 定义头像的样式 */
+.avatar {
+    width: 130px; /* 设置头像的宽度为130像素 */
+    height: 130px; /* 设置头像的高度为130像素 */
+    border-radius: 50%; /* 使头像呈现圆形 */
+    background-position: center; /* 背景图像居中 */
+    background-size: cover; /* 背景图像覆盖整个头像区域 */
+    margin: 20px auto; /* 设置上下外边距为20像素，左右外边距自动以居中方式分配 */
+    border: 4px solid #ffffff; /* 添加一个白色边框，宽度为4像素 */
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3); /* 添加更强的阴影效果 */
+    transition: transform 0.3s; /* 增加平滑变换效果 */
+    position: relative; /* 绝对定位的前提，确保伪元素正确显示 */
+}
+
+/* 鼠标悬停和触摸时的效果 */
+.avatar:hover,
+.avatar:active {
+    transform: scale(1.1); /* 鼠标悬停或触摸时放大头像 */
+}
+
+/* 可选添加的效果，使用:after伪元素增加额外装饰 */
+.avatar:after {
+    content: ''; /* 使用空内容 */
+    display: block; /* 设置为块级元素 */
+    width: 100%; /* 宽度为100% */
+    height: 100%; /* 高度为100% */
+    border-radius: 50%; /* 圆角 */
+    background-color: rgba(255, 255, 255, 0.3); /* 半透明白色覆盖 */
+    position: absolute; /* 绝对定位 */
+    top: 0; /* 顶部对齐 */
+    left: 0; /* 左侧对齐 */
+    z-index: 1; /* 确保在头像上方显示 */
+}
+
+/* 添加按钮的样式 */
+.buttons {
+    display: flex; /* 使用flexbox布局 */
+    justify-content: center; /* 水平居中 */
+    margin-top: 20px; /* 上边距 */
+}
+
+.btn {
+    background-color: #20a53a; /* 按钮背景色 */
+    color: white; /* 按钮文本颜色 */
+    padding: 10px 20px; /* 内边距 */
+    border: none; /* 去掉边框 */
+    border-radius: 5px; /* 圆角 */
+    text-decoration: none; /* 去掉下划线 */
+    font-weight: bold; /* 字体加粗 */
+    transition: background-color 0.3s, transform 0.3s; /* 背景色和变换过渡 */
+    margin: 0 10px; /* 按钮间距 */
+}
+
+.btn:hover {
+    background-color: #16a34a; /* 悬停时按钮背景色 */
+    transform: scale(1.05); /* 悬停时放大效果 */
+}
+
+/* 媒体查询，用于小屏设备调整样式 */
+@media (max-width: 600px) {
+    .container {
+        width: 80%; /* 在小屏幕上将容器宽度设为80% */
+        padding: 5%; /* 增加内边距 */
+    }
+    .avatar {
+        width: 100px; /* 在小屏幕上将宽度调整为100像素 */
+        height: 100px; /* 在小屏幕上将高度调整为100像素 */
+        margin: 15px auto; /* 在小屏幕上减少上下外边距 */
+    }
+
+    /* 在小屏幕上调整头像放大效果 */
+    .avatar:hover,
+    .avatar:active {
+        transform: scale(1.05); /* 在小屏幕上略微放大效果 */
+    }
+}
+
+@media (max-width: 400px) {
+    .avatar {
+        width: 80px; /* 在更小屏幕上将宽度调整为80像素 */
+        height: 80px; /* 在更小屏幕上将高度调整为80像素 */
+        margin: 10px auto; /* 在更小屏幕上减少上下外边距 */
+    }
+
+    /* 在更小屏幕上调整头像放大效果 */
+    .avatar:hover,
+    .avatar:active {
+        transform: scale(1.05); /* 在更小屏幕上略微放大效果 */
+    }
+}
